@@ -1,11 +1,4 @@
-type Character = {
-  name: string;
-  skillset: string[];
-  votes: number;
-  imageUrl: string;
-  background: string;
-  nickName: null | string;
-};
+import { Character } from "./types";
 
 export const data: Character[] = [
   {

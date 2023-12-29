@@ -1,7 +1,11 @@
-export const TopChar = ({data}) => {
+import "../TopChar.css"
+import { TopCharCardsProps } from  "../types"
+
+
+export const TopChar = ({data} : TopCharCardsProps) => {
   return (
-    <div className="topChar-container">
-      <div className="topChar-title">Top Characters</div>
+    <section id="character-ratings">
+      <h4>Top Characters</h4>
       <table>
         <tr>
           <th>Name</th>
@@ -9,19 +13,18 @@ export const TopChar = ({data}) => {
           <th>Votes</th>
         </tr>
         {
-          data.map((element, index) => (
+          data
+          .sort((a,b) => b.votes - a.votes)
+          .slice(0,5)
+          .map((element, index) => (
             <tr className={index % 2 === 0 ? "dark" : "light"}>
                 <td>{element.name}</td>
-                <td>{element.skillset.map((skill, index) => (
-                  <span>
-                     {index !== element.skillset.length -1 ? skill + ", ": skill}
-                  </span>
-                ))}</td>
+                <td>{element.skillset.join(", ")}</td>
                 <td>{element.votes}</td>
             </tr>
           ))
         }
       </table>
-    </div>
+    </section>
   );
 }

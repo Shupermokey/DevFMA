@@ -1,4 +1,4 @@
-
+import "./reset.css"
 import './App.css'
 import { CharCards } from './components/CharCards'
 import { Nav } from './components/Nav'
