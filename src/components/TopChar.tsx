@@ -1,8 +1,13 @@
 import "../TopChar.css"
-import { TopCharCardsProps } from  "../types"
+import { Character } from "../types";
 
 
-export const TopChar = ({data} : TopCharCardsProps) => {
+
+ type TopCharProps = {
+  data: Character[];
+}
+
+export const TopChar = ({data} : TopCharProps) => {
   return (
     <section id="character-ratings">
       <h4>Top Characters</h4>

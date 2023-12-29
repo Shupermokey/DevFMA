@@ -7,6 +7,4 @@ export type Character = {
   nickName: null | string;
 };
 
-export type TopCharCardsProps = {
-  data: Character[];
-}
+

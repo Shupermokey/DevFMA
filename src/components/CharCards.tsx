@@ -1,5 +1,11 @@
 import { Card } from "./Card";
-import { TopCharCardsProps } from "../types";
+import { Character } from "../types";
+
+
+
+type TopCharCardsProps = {
+  data: Character[];
+}
 
 export const CharCards = ({data} : TopCharCardsProps) => {
   return (

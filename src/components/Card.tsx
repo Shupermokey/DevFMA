@@ -1,6 +1,13 @@
 import "../Cards.css"
 
-export const Card = ({name, img, text, nickname}: {name:string, img:string, text:string, nickname:string}) => {
+type Card = {
+  name: string;
+  img: string;
+  text: string;
+  nickname: string | null;
+}
+
+export const Card = ({name, img, text, nickname}: Card) => {
   return (
     <div className="card">
       <div className="card-titles">
